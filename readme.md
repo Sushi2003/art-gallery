@@ -2,7 +2,7 @@
 
 ArtVista is a web-based virtual art gallery that showcases masterpieces from the Metropolitan Museum of Art. This project provides an interactive platform for art enthusiasts to explore artwork from various periods and cultures.
 
-![ArtVista Screenshot](pfp/Screenshot 2025-03-17 at 10.56.44 PM.png)
+<img width="1330" alt="Image" src="https://github.com/user-attachments/assets/6d853ab0-8ed5-4976-8e0f-8a59e5396dc8" />
 
 ## Demo: [art-vista.com](https://art-gallery-chi-three.vercel.app/)
 
