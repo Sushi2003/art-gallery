@@ -4,6 +4,9 @@ ArtVista is a web-based virtual art gallery that showcases masterpieces from the
 
 ![ArtVista Screenshot](pfp/Screenshot 2025-03-17 at 10.56.44 PM.png)
 
+## Demo: [art-vista.com](https://art-gallery-chi-three.vercel.app/)
+
+
 ## Features
 
 - **Dynamic Content**: Fetches real artwork data from the Metropolitan Museum of Art API
