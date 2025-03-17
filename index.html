@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Art Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <h1>ArtVista</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to ArtVista</h1>
+        <p>Explore masterpieces from the Metropolitan Museum of Art</p>
+        <a href="#gallery" class="btn">Browse Gallery</a>
+    </div>
+</section>
+
+<section id="gallery" class="gallery-section">
+    <h2>Gallery Collections</h2>
+
+    <div class="filters">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search artworks...">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="category-filters">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="European Paintings">European</button>
+            <button class="filter-btn" data-category="Asian Art">Asian</button>
+            <button class="filter-btn" data-category="Egyptian Art">Egyptian</button>
+            <button class="filter-btn" data-category="Photography">Photography</button>
+        </div>
+    </div>
+
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <p>Loading masterpieces...</p>
+    </div>
+
+    <div class="gallery-container" id="gallery-container">
+        <!-- Artwork items will be populated via JavaScript -->
+    </div>
+
+    <div class="load-more-container">
+        <button id="load-more" class="btn">Load More</button>
+    </div>
+</section>
+
+<section id="about" class="about-section">
+    <h2>About This Gallery</h2>
+    <p>ArtVista is a virtual art gallery showcasing the extensive collection of the Metropolitan Museum of Art. Our platform provides art enthusiasts with an immersive digital experience to explore masterpieces from various periods and cultures.</p>
+    <p>All artwork displayed is sourced directly from the Metropolitan Museum of Art's public API, allowing visitors to experience these treasures from anywhere in the world.</p>
+
+    <h2 class="team-heading">Meet Our Team</h2>
+    <div class="team-container">
+        <div class="developer-card">
+            <div class="developer-image">
+                <img src="pfp/portfolio_pic.jpg.jpeg" alt="Developer 1">
+            </div>
+            <div class="developer-info">
+                <h3>Tamanna Singh</h3>
+                <p class="developer-role">Frontend Developer</p>
+                <p class="developer-institute">ADGIPS Delhi</p>
+                <div class="developer-links">
+                    <a href="https://github.com/TamannaaSinghh" target="_blank" class="github-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="developer-card">
+            <div class="developer-image">
+                <img src="pfp/oonth.png" alt="Developer 2">
+            </div>
+            <div class="developer-info">
+                <h3>Tanishq Kashla</h3>
+                <p class="developer-role">UI/UX Designer</p>
+                <p class="developer-institute">ADGIPS Delhi</p>
+                <div class="developer-links">
+                    <a href="https://github.com/TanishqKashla" target="_blank" class="github-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="developer-card">
+            <div class="developer-image">
+                <img src="pfp/IMG_5734 2.jpg" alt="Developer 3">
+            </div>
+            <div class="developer-info">
+                <h3>Sushmayana Mishra</h3>
+                <p class="developer-role">Backend Developer</p>
+                <p class="developer-institute">ADGIPS Delhi</p>
+                <div class="developer-links">
+                    <a href="https://github.com/sushi2003" target="_blank" class="github-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="artwork-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-image-container">
+            <img id="modal-image" src="" alt="Artwork">
+            <div class="zoom-controls">
+                <button id="zoom-in"><i class="fas fa-search-plus"></i></button>
+                <button id="zoom-out"><i class="fas fa-search-minus"></i></button>
+            </div>
+        </div>
+        <div class="artwork-details">
+            <h2 id="modal-title"></h2>
+            <p id="modal-artist"></p>
+            <p id="modal-date"></p>
+            <p id="modal-medium"></p>
+            <p id="modal-dimensions"></p>
+            <div class="artwork-description">
+                <p id="modal-description"></p>
+            </div>
+            <div class="artwork-navigation">
+                <button id="prev-artwork"><i class="fas fa-chevron-left"></i> Previous</button>
+                <button id="next-artwork">Next <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <h2>ArtVista</h2>
+            <p>A virtual gateway to art masterpieces</p>
+        </div>
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h3>Contact</h3>
+            <p><i class="fas fa-envelope"></i> info@artvista.example</p>
+            <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 ArtVista. All artwork images and data courtesy of The Metropolitan Museum of Art.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
